@@ -36,21 +36,32 @@ body {
 }
 
 /* LOGO + TEXT SIDE BY SIDE */
+/* LOGO ABOVE TEXT (centered) */
 .logo-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  text-align: center;
   margin-bottom: 24px;
 }
 
 .logo-img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
+  width: 90px;          /* increase size */
+  height: 90px;
+  border-radius: 50%;   /* makes it circular */
+  object-fit: cover;    /* keeps proportions */
+  display: block;
+  margin: 0 auto 10px;  /* center + space below */
 }
 
 .logo-text {
+  font-size: 1.7rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #4fc3f7, #3366cc, #4fc3f7);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shineText 3s ease-in-out infinite;
+  text-align: center;
+}.logo-text {
   font-size: 1.7rem;
   font-weight: 800;
   background: linear-gradient(90deg, #4fc3f7, #3366cc, #4fc3f7);
