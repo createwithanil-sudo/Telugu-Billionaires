@@ -15,7 +15,7 @@
 
 body {
   font-family: var(--font);
-background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("bg.jpg") center center / cover no-repeat fixed;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("bg.jpg") center center / cover no-repeat fixed;
   color: var(--text);
   display: flex;
   flex-direction: column;
