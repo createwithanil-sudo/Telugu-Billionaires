@@ -12,10 +12,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  background: #000; /* fallback, so no gray edges */
+}
 body {
   font-family: var(--font);
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("bg.jpg") center center / cover no-repeat fixed;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url("bg.jpg") center center / cover no-repeat;
   color: var(--text);
   display: flex;
   flex-direction: column;
