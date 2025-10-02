@@ -6,38 +6,42 @@
   <title>Jalwa Accurate Signals</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '637548985902058');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=637548985902058&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '637548985902058');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=637548985902058&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
   <div class="card">
     <!-- Logo image replaces dart emoji -->
     <div class="logo-block">
-  <img src="logo.png" alt="Jalwa Logo" class="logo-img" />
-  <div class="logo-text">Jalwa Sureshot</div>
-</div>
+      <img src="logo.png" alt="Jalwa Logo" class="logo-img" />
+      <div class="logo-text">Jalwa Sureshot</div>
+    </div>
 
     <h1>Lets Grow Toghether.</h1>
     <p class="description">
-      join Now Mavas To Get Number Sureshot.
+      Join Now Mavas To Get Number Sureshot.
       <br />No Gain? Return Policy
     </p>
-    <button class="cta-button" onclick="window.location.href='https://t.me/+OgvagnmfJMc5Njhl'">Join Now</button>
+
+    <!-- CTA button with Pixel custom event -->
+    <button class="cta-button" id="join-btn">Join Now</button>
+
     <div class="timer" id="countdown">Next Signal drops in: 00:00</div>
 
     <div class="testimonials">
@@ -47,31 +51,16 @@ src="https://www.facebook.com/tr?id=637548985902058&ev=PageView&noscript=1"
     </div>
   </div>
 
+  <!-- Script: Join button → redirect + fire JoinClick event -->
+  <script>
+    document.getElementById("join-btn").addEventListener("click", function() {
+      // Fire custom Pixel event
+      fbq('trackCustom', 'JoinClick');
+      // Redirect to Telegram channel
+      window.location.href = 'https://t.me/+OgvagnmfJMc5Njhl';
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
